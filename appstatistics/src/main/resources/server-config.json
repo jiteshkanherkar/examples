@@ -1,0 +1,30 @@
+[
+	{
+		"host"	:	"localhost",
+		"ipAddress"	:	"127.0.0.1",
+		"userName"	:	"jitesh",
+		"password"	:	"mh16bn4983",
+		"status"	:	null,
+		"processes" :	[
+							{
+								"pid"	: null,
+								"pName"	:	"Eclipse",
+								"signature"	:	"Eclipse"
+							},
+							{
+								"pid"	: null,
+								"pName"	:	"appstatistics",
+								"signature"	:	"APP_STATS"
+							}
+							
+		]
+	},
+	{
+		"host"	:	"localhost-1",
+		"ipAddress"	:	"127.0.0.1",
+		"userName"	:	"jitesh",
+		"password"	:	"mh16bn4983",
+		"status"	:	null
+	}
+	
+]

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Properties>
+		<Property name="log-path">/tmp/log</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="Console">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<File name="App-File-Appender"
+			fileName="${log-path}/app_statistics.log">
+			<PatternLayout>
+				<pattern>
+					[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+				</pattern>
+			</PatternLayout>
+		</File>
+		<File name="SpringBoot-File-Appender"
+			fileName="${log-path}/springboot_log.log">
+			<PatternLayout>
+				<pattern>
+					[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+				</pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Root level="ERROR">
+			<AppenderRef ref="Console" />
+		</Root>
+		<logger name="org" level="TRACE">
+			<AppenderRef ref="Console" />
+		</logger>
+		<logger name="org.springframework" level="TRACE">
+			<AppenderRef ref="SpringBoot-File-Appender" />
+		</logger>
+		<logger name="org.jitesh" level="ERROR">
+			<AppenderRef ref="App-File-Appender" />
+		</logger>
+		<logger name="org.jitesh" level="INFO">
+			<AppenderRef ref="App-File-Appender" />
+		</logger>
+	</Loggers>
+</Configuration>
